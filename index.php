@@ -19,12 +19,14 @@
     
 
     <ul>
-        <li><a href="post.php?id=1">กระทู้ที่ 1</a></li>
-        <li><a href="post.php?id=2">กระทู้ที่ 2</a></li>
-        <li><a href="post.php?id=3">กระทู้ที่ 3</a></li>
-        <li><a href="post.php?id=4">กระทู้ที่ 4</a></li>
-        <li><a href="post.php?id=5">กระทู้ที่ 5</a></li>
-    </ul>
+        <?php
+        $id = 1;
+        while ($id <= 10){
+            echo "<li><a href='post.php?id=$id'>กระทู้ที่ $id</a></li>" ;
+        $id++;
+        }
+        ?>
+    </ul>    
 </form>
 </body>
 </html>
