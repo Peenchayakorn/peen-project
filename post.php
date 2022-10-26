@@ -7,10 +7,10 @@
     <title>Post</title>
 </head>
 <body>
-    <h1><center><b>Webboard w2</b></center></h1>
+    <h1 class="mt-2"><center><b>Peenchayakorn</b></center></h1>
     <hr>
-    <center>ต้องการดูกระทู้หมายเลข <?php echo $_GET["id"]; ?></center>
-    <center><?php $n =$_GET["id"];
+    <center>ต้องการดูกระทู้หมายเลข <?php echo $_GET['id']; ?></center>
+    <center><?php $n =$_GET["id"]; 
     if(($n%2)==0)
         echo "เป็นกระทู้หมายเลขคู่";
     else

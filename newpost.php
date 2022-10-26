@@ -10,7 +10,7 @@
     <title>Newpost</title>
 </head>
 <body>
-    <h1><center><b>Webboard w2</b></center></h1>
+    <h1 class="mt-2"><center><b>Peenchayakorn </b></center></h1>
     <hr>
     ผู้ใช้ : <?php 
             if(! isset($_SESSION['role'])){
