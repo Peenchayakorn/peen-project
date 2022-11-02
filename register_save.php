@@ -1,10 +1,12 @@
-<?php session_start(); ?>
+<?php session_start(); 
+?>
 <?php
     $login=$_POST["login"];
     $password=$_POST["pwd"];
     $name=$_POST["name"];
     $gender=$_POST["gender"];
     $email=$_POST["email"];
+    
 
     $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8", "root", "");
     $password=sha1($password);
@@ -18,7 +20,7 @@
          $sql = "INSERT INTO user (login, password, name, gender, email, role) 
          VALUES ('$login', '$password', '$name','$gender','$email','m')";
          $conn->exec($sql);
-         $_SESSION['add_login'] = "success";
+            $_SESSION['add_login'] = "success";
     } 
     $conn=null;
     header("Location: register.php");

@@ -13,6 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Peenchayakorn main page</title>
+    <script>
+        function myFunction1() {
+            let r=confirm("คุณต้องการลบหรือไม่");
+            return r;
+        }
+    </script>
 </head>
 <?php
     if(isset($_SESSION['id'])&&$_SESSION['role']=='a'){
@@ -67,7 +73,7 @@
 ?>
 <body>
     <div class="container">
-    <h1 style="text-align: center ;"class="mt-3">WISESHADOW</h1>
+    <h1 style="text-align: center ;"class="mt-3">Peenchayakorn</h1>
     <?php
         include "nav.php";
     ?>
@@ -86,7 +92,7 @@
                 </ul>
             </span>
         </div>
-        <div><a href="newpost.php" class="btn btn-success btn-sm"><i class="bi bi-plus"></i>สร้างกระทู้ใหม่</a></div>
+        <div><a href="newpost.php" class="btn btn-success btn-sm" onclick="return myFunction1();"><i class="bi bi-plus"></i>สร้างกระทู้ใหม่</a></div>
     </div>
         
         

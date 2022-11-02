@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="container">
-    <h1 style="text-align: center;" class="mt-3">WISESHADOW</h1>
+    <h1 style="text-align: center;" class="mt-3">Peenchayakorn</h1>
     <?php
         include "nav.php";
     ?>
@@ -29,6 +29,17 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
+            <?php
+            if(isset($_SESSION['add_login'])){
+                if($_SESSION['add_login'] == "error"){
+                echo "<div class='alert alert-danger' role='alert'>ชื่อบัญชีซ้ำหรือข้อมูลมีปัญหามั้ง</div>"; 
+                }
+                else{
+                echo "<div class='alert alert-success' role='alert'>เพิ่มบัญชีสำเร็จแล้วน่ะ</div>"; 
+                }
+                unset($_SESSION['add_login']);
+            }
+            ?>
             <div class="card text-dark bg-white border-primary">
                 <div class="card-header bg-primary text-white">กรอกข้อมูล</div>
                 <div class="card-body">

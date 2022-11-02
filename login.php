@@ -6,6 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <script>
+        function password_show_hide(){
+            let x=document.getElementById("pwd");
+            let show_eye=document.getElementById("show_eye");
+            let hide_eye=document.getElementById("hide_eye");
+            hide_eye.classList.remove("d-none");
+            if(x.type==="password"){
+                x.type="text";
+                show_eye.style.display="none";
+                hide_eye.style.display="block";
+            }else{
+                x.type="password";
+                show_eye.style.display="block";
+                hide_eye.style.display="none";
+            }
+        }
+    </script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -39,7 +56,13 @@
                         </div>
                         <div class="form-group mb-3" >
                             <label  class="form-label">Password:</label>
+                            <div class="input-group">
                             <input type="password" class="form-control" id="pwd" name="pwd" >
+                            <span class="input-group-text" onclick="password_show_hide()">
+                                <i class="bi bi-eye-fill" id="show_eye"></i> 
+                                <i class="bi bi-eye-slash-fill d-none" id="hide_eye"></i>                       
+                            </span>
+                            </div>
                         </div>
                         <center><button type="submit" class="btn btn-secondary btn-sm">Login</button></center>
                     </form>
